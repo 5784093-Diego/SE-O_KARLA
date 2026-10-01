@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceso personal | Med Institucional</title>
+    <link rel="stylesheet" href="style_acceso.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">
+            <div class="logo-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+            <div class="logo-text"><h2>Med</h2><span>Institucional</span></div>
+        </div>
+        <nav class="nav-menu">
+            <a href="pantalla_principal.html">Inicio</a>
+            <a href="enfermeria.html">Enfermería</a>
+            <a href="horarios.html">Horarios</a>
+            <a href="pantalla_principal.html#informacion">Información</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+        <a href="acceso_personal.html" class="staff-button"><i class="fa-solid fa-lock"></i> Acceso personal</a>
+    </header>
+    <main>
+        <section class="page-header">
+            <span class="badge"><i class="fa-solid fa-lock"></i> Zona restringida</span>
+            <h1>Acceso personal</h1>
+            <p>Solo para personal autorizado de la enfermería.</p>
+        </section>
+        <div class="login-box">
+            <div class="icon-big"><i class="fa-solid fa-user-nurse"></i></div>
+            <h2>Iniciar sesión</h2>
+            <p>Ingresa tus credenciales para continuar</p>
+            <form onsubmit="event.preventDefault(); alert('Pantalla de ejemplo: aquí se conectará el sistema de inicio de sesión.');">
+                <div class="field"><label for="usuario">Usuario</label><input type="text" id="usuario" placeholder="Tu usuario" required></div>
+                <div class="field"><label for="clave">Contraseña</label><input type="password" id="clave" placeholder="••••••••" required></div>
+                <button type="submit" class="btn-login">Entrar</button>
+            </form>
+        </div>
+            <div class="back-container"><a href="pantalla_principal.html" class="btn-back"><i class="fa-solid fa-arrow-left"></i> Volver al Inicio</a></div>
+    </main>
+    <footer>
+        <div class="footer-main">
+            <div class="footer-brand">
+                <div class="logo footer-logo">
+                    <div class="logo-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+                    <div class="logo-text"><h2>Med</h2><span>Institucional</span></div>
+                </div>
+                <p>Sistema de información para la enfermería institucional del INFRAMEN.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Navegación</h3>
+                <a href="pantalla_principal.html">Inicio</a>
+                <a href="enfermeria.html">Enfermería</a>
+                <a href="horarios.html">Horarios</a>
+                <a href="contacto.html">Contacto</a>
+            </div>
+            <div class="footer-links">
+                <h3>Institución</h3>
+                <span>INFRAMEN</span>
+                <span>Desarrollo de Software</span>
+                <span>Proyecto Final</span>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2026 Med Institucional</span>
+            <span>Instituto Nacional Francisco Menéndez</span>
+        </div>
+    </footer>
+</body>
+</html>

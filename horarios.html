@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horarios de Atención | Med Institucional</title>
+    <link rel="stylesheet" href="style_horarios.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- ==========================
+         NAVEGACIÓN
+    =========================== -->
+    <header class="navbar">
+        <div class="logo">
+            <div class="logo-icon">
+                <i class="fa-solid fa-heart-pulse"></i>
+            </div>
+            <div class="logo-text">
+                <h2>Med</h2>
+                <span>Institucional</span>
+            </div>
+        </div>
+
+        <nav class="nav-menu">
+            <a href="pantalla_principal.html">Inicio</a>
+            <a href="enfermeria.html">Enfermería</a>
+            <a href="horarios.html" class="active">Horarios</a>
+            <a href="pantalla_principal.html#informacion">Información</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+
+        <a href="acceso_personal.html" class="staff-button">
+            <i class="fa-solid fa-lock"></i>
+            Acceso personal
+        </a>
+    </header>
+
+    <!-- ==========================
+         ENCABEZADO DE SECCIÓN
+    =========================== -->
+    <main>
+        <section class="page-header">
+            <div class="header-content">
+                <span class="badge"><i class="fa-solid fa-clock"></i> Consulta de Horarios</span>
+                <h1>Horarios de Atención</h1>
+                <p>Conoce los turnos y horarios disponibles para la atención en la enfermería del INFRAMEN.</p>
+            </div>
+        </section>
+
+        <!-- ==========================
+             HORARIOS Y DISPONIBILIDAD
+        =========================== -->
+        <section class="schedule-container">
+
+            <div class="schedule-grid">
+                <!-- TURNO MAÑANA -->
+                <div class="schedule-card">
+                    <div class="card-header">
+                        <i class="fa-solid fa-sun icon-turn"></i>
+                        <div>
+                            <h3>Turno Matutino</h3>
+                            <span>Jornada de la mañana</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="time-row">
+                            <span>Lunes a Viernes</span>
+                            <strong>7:00 AM – 12:00 MD</strong>
+                        </div>
+                        <div class="status-badge available">
+                            <i class="fa-solid fa-circle-check"></i> Disponible
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TURNO TARDE -->
+                <div class="schedule-card">
+                    <div class="card-header">
+                        <i class="fa-solid fa-cloud-sun icon-turn"></i>
+                        <div>
+                            <h3>Turno Vespertino</h3>
+                            <span>Jornada de la tarde</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="time-row">
+                            <span>Lunes a Viernes</span>
+                            <strong>1:00 PM – 5:00 PM</strong>
+                        </div>
+                        <div class="status-badge available">
+                            <i class="fa-solid fa-circle-check"></i> Disponible
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RECOMENDACIONES -->
+            <div class="info-box">
+                <i class="fa-solid fa-circle-info"></i>
+                <div>
+                    <h4>Información Importante</h4>
+                    <p>En caso de emergencias graves durante el horario de clases, la atención es inmediata sin requerir cita previa.</p>
+                </div>
+            </div>
+
+            <!-- BOTÓN REGRESO -->
+            <div class="back-container">
+                <a href="pantalla_principal.html" class="btn-back">
+                    <i class="fa-solid fa-arrow-left"></i> Volver al Inicio
+                </a>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- ==========================
+         FOOTER
+    =========================== -->
+    <footer>
+        <div class="footer-main">
+            <div class="footer-brand">
+                <div class="logo footer-logo">
+                    <div class="logo-icon">
+                        <i class="fa-solid fa-heart-pulse"></i>
+                    </div>
+                    <div class="logo-text">
+                        <h2>Med</h2>
+                        <span>Institucional</span>
+                    </div>
+                </div>
+                <p>Sistema de información para la enfermería institucional del INFRAMEN.</p>
+            </div>
+
+            <div class="footer-links">
+                <h3>Navegación</h3>
+                <a href="pantalla_principal.html">Inicio</a>
+                <a href="enfermeria.html">Enfermería</a>
+                <a href="horarios.html">Horarios</a>
+                <a href="contacto.html">Contacto</a>
+            </div>
+
+            <div class="footer-links">
+                <h3>Institución</h3>
+                <span>INFRAMEN</span>
+                <span>Desarrollo de Software</span>
+                <span>Proyecto Final</span>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <span>© 2026 Med Institucional</span>
+            <span>Instituto Nacional Francisco Menéndez</span>
+        </div>
+    </footer>
+
+</body>
+</html>
