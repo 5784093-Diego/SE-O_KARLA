@@ -7,21 +7,32 @@
     <link rel="stylesheet" href="style_enfermeria.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
+    <script src="menu.js"></script>
 <body>
-    <header class="navbar">
-        <div class="logo">
-            <div class="logo-icon"><i class="fa-solid fa-heart-pulse"></i></div>
-            <div class="logo-text"><h2>Med</h2><span>Institucional</span></div>
-        </div>
-        <nav class="nav-menu">
-            <a href="pantalla_principal.html">Inicio</a>
-            <a href="enfermeria.html" class="active">Enfermería</a>
-            <a href="horarios.html">Horarios</a>
-            <a href="pantalla_principal.html#informacion">Información</a>
-            <a href="contacto.html">Contacto</a>
-        </nav>
-        <a href="acceso_personal.html" class="staff-button"><i class="fa-solid fa-lock"></i> Acceso personal</a>
-    </header>
+ <header class="navbar">
+    <div class="logo">
+        <div class="logo-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+        <div class="logo-text"><h2>Med</h2><span>Institucional</span></div>
+    </div>
+
+    <nav class="nav-menu" id="navMenu">
+        <a href="pantalla_principal.html">Inicio</a>
+        <a href="enfermeria.html">Enfermería</a>
+        <a href="horarios.html">Horarios</a>
+        <a href="campañas.html" class="active">Campañas</a>
+        <a href="pantalla_principal.html#informacion">Información</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="acceso_personal.html" class="menu-staff"><i class="fa-solid fa-lock"></i> Acceso personal</a>
+    </nav>
+
+    <a href="acceso_personal.html" class="staff-button"><i class="fa-solid fa-lock"></i> Acceso personal</a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+</header>
+
+<div class="menu-overlay" id="menuOverlay"></div>
     <main>
         <section class="page-header">
             <span class="badge"><i class="fa-solid fa-user-nurse"></i> Nuestra enfermería</span>
