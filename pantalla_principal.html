@@ -10,6 +10,50 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <script src="menu.js"></script>
+    <script>
+document.addEventListener('DOMContentLoaded', function () {
+    var carrusel = document.getElementById('heroCarousel');
+    var contenedorPuntos = document.getElementById('heroDots');
+    if (!carrusel || !contenedorPuntos) return;
+
+    var slides = carrusel.querySelectorAll('.hero-slide');
+    var actual = 0;
+    var intervalo;
+
+    // Crear un punto por cada imagen
+    slides.forEach(function (_, i) {
+        var punto = document.createElement('button');
+        punto.setAttribute('aria-label', 'Ir a la imagen ' + (i + 1));
+        punto.addEventListener('click', function () {
+            mostrar(i);
+            reiniciar();
+        });
+        contenedorPuntos.appendChild(punto);
+    });
+
+    var puntos = contenedorPuntos.querySelectorAll('button');
+
+    function mostrar(n) {
+        slides[actual].classList.remove('active');
+        puntos[actual].classList.remove('active');
+        actual = n;
+        slides[actual].classList.add('active');
+        puntos[actual].classList.add('active');
+    }
+
+    function siguiente() {
+        mostrar((actual + 1) % slides.length);
+    }
+
+    function reiniciar() {
+        clearInterval(intervalo);
+        intervalo = setInterval(siguiente, 4000);
+    }
+
+    puntos[0].classList.add('active');
+    intervalo = setInterval(siguiente, 4000);
+});
+</script>
 <body>
 
     <!-- ==========================
@@ -18,7 +62,7 @@
 
 <header class="navbar">
     <div class="logo">
-        <div class="logo-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+        <img src="logo_inframen.png" alt="Logo Med Institucional" class="logo-img">
         <div class="logo-text"><h2>Med</h2><span>Institucional</span></div>
     </div>
 
@@ -64,8 +108,8 @@
 
                 <p>
                     Med Institucional es una plataforma creada para
-                    facilitar el acceso a la información y atención
-                    de la enfermería de nuestra institución.
+                    que los alumnos y personal estudiantil puedan ver información sobre nuestra 
+                    enfermeria institucional gratuita para todos los alumnos.
                 </p>
 
                 <div class="hero-buttons">
@@ -78,12 +122,15 @@
             </div>
 
 
-            <!-- CONTENEDOR DE IMAGEN (50% DERECHO) -->
+         >
 
-            <div class="hero-card-container">
-                <img src="imagen_doctor.png" alt="Enfermería INFRAMEN" class="hero-image">
-            </div>
+          <!-- CARRUSEL DE IMÁGENES (50% DERECHO) -->
 
+<div class="hero-card-container hero-carousel" id="heroCarousel">
+    <img src="imagen_doctor.png" alt="Enfermería INFRAMEN 1" class="hero-slide active">
+    <img src="imagen2.png" alt="Enfermería INFRAMEN 2" class="hero-slide">
+    <div class="hero-dots" id="heroDots"></div>
+</div>
         </section>
 
 
@@ -169,15 +216,13 @@
 
         <section class="about-section" id="informacion">
 
-            <div class="about-image">
-                <div class="about-icon">
-                    <i class="fa-solid fa-shield-heart"></i>
-                </div>
-                <div class="floating-card">
-                    <i class="fa-solid fa-check"></i>
-                    Atención organizada
-                </div>
-            </div>
+<div class="about-image">
+    <img src="doctores_revisando.png" alt="Atención en la enfermería del INFRAMEN" class="about-photo">
+    <div class="floating-card">
+        <i class="fa-solid fa-check"></i>
+        Atención organizada
+    </div>
+</div>
 
             <div class="about-content">
                 <span class="section-label">MED INSTITUCIONAL</span>
